@@ -117,7 +117,7 @@ logifff("Yash",22);
 // console.log(id_details)
 
 
-// // Generics
+// // Generics //// Generics allow you to create reusable components that can work with any data type.
 // function log<T>(name:T):void{
 // 	console.log(`Hello ${name}!`);
 // }
