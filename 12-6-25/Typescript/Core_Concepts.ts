@@ -201,3 +201,63 @@ logifff("Yash",22);
 // let derived1 = new Derived(3, "Alice");
 // console.log(derived1.getDetails());
 
+
+// Inheritance
+
+// Example of inheritance
+
+// class Animal {
+// 	constructor(public name: string) {}	
+// 	makeSound(): void {
+// 		console.log(`${this.name} makes a sound.`);
+// 	}
+// }
+// class Dog extends Animal {
+// 	makeSound(): void {
+// 		console.log(`${this.name} barks.`);
+// 	}
+// }
+// class Cat extends Animal {
+// 	makeSound(): void {
+// 		console.log(`${this.name} meows.`);
+// 	}
+// }
+// let dog = new Dog("Buddy");
+// let cat = new Cat("Whiskers");
+// dog.makeSound(); // Output: Buddy barks.
+// cat.makeSound(); // Output: Whiskers meows.
+
+
+// Encapsulation
+
+// Example of encapsulation
+class BankAccount {
+	private balance: number; // private property to store the balance
+	constructor(initialBalance: number) {
+		this.balance = initialBalance;
+	}
+	deposit(amount: number): void {
+		if (amount > 0) {
+			this.balance += amount; // increase the balance
+			console.log(`Deposited: $${amount}. New balance: $${this.balance}.`);
+		} else {
+			console.log("Deposit amount must be positive.");
+		}
+	}
+	withdraw(amount: number): void {
+		if (amount > 0 && amount <= this.balance) {
+			this.balance -= amount; // decrease the balance
+			console.log(`Withdrew: $${amount}. New balance: $${this.balance}.`);
+		} else {
+			console.log("Withdrawal amount must be positive and less than or equal to the balance.");
+		}
+	}
+	getBalance(): number {
+		return this.balance; // public method to get the balance
+	}
+}
+let account = new BankAccount(1000);
+account.deposit(500); // Deposited: $500. New balance: $1500.
+account.withdraw(200); // Withdrew: $200. New balance: $1300.
+console.log(`Current balance: $${account.getBalance()}`); // Current balance: $1300.
+// Encapsulation is a fundamental principle of object-oriented programming that restricts direct access to an object's data and methods.
