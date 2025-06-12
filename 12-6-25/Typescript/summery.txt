@@ -1,0 +1,25 @@
+1. function 
+    1. With if else(ternary operator)
+    2. optional value
+    3. Default value
+    4. if elseif
+
+2. interface(only for object)
+    1. Normal
+    2. With method
+
+3. Type aliases
+    1. Normal
+    2. Union
+    3. intersection
+
+4. Union
+5. Intersection
+6. Type Assertions (We telling you to compiler which type value have)
+7. Classes
+    1. Normal(Public)
+    2. protected
+    3. private
+    4. inheritance
+    5. Encapsulation
+8. Import & Export
