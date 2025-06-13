@@ -232,13 +232,13 @@ logifff("Yash",22);
 
 // Example of encapsulation
 class BankAccount {
-	private balance: number; // private property to store the balance
+	private balance: number; 
 	constructor(initialBalance: number) {
 		this.balance = initialBalance;
 	}
 	deposit(amount: number): void {
 		if (amount > 0) {
-			this.balance += amount; // increase the balance
+			this.balance += amount; 
 			console.log(`Deposited: $${amount}. New balance: $${this.balance}.`);
 		} else {
 			console.log("Deposit amount must be positive.");
@@ -246,18 +246,18 @@ class BankAccount {
 	}
 	withdraw(amount: number): void {
 		if (amount > 0 && amount <= this.balance) {
-			this.balance -= amount; // decrease the balance
+			this.balance -= amount; 
 			console.log(`Withdrew: $${amount}. New balance: $${this.balance}.`);
 		} else {
 			console.log("Withdrawal amount must be positive and less than or equal to the balance.");
 		}
 	}
 	getBalance(): number {
-		return this.balance; // public method to get the balance
+		return this.balance; 
 	}
 }
 let account = new BankAccount(1000);
-account.deposit(500); // Deposited: $500. New balance: $1500.
-account.withdraw(200); // Withdrew: $200. New balance: $1300.
-console.log(`Current balance: $${account.getBalance()}`); // Current balance: $1300.
+account.deposit(500); 
+account.withdraw(200);
+console.log(`Current balance: $${account.getBalance()}`); 
 // Encapsulation is a fundamental principle of object-oriented programming that restricts direct access to an object's data and methods.
