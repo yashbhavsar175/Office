@@ -1,0 +1,12 @@
+Typescript
+    1. Generic
+    2. Type Narrowing
+    3. Utility
+        1. Partial
+        2. Required
+        3. Pick
+        4. Omit 
+        5. Readonly
+        6. Record
+    4. Key of
+    5. literal Type
