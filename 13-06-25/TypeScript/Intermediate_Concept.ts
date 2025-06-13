@@ -90,4 +90,44 @@ let e: Omit<a,"email">={
 	age:123
 }
 
-console.log(e)
+///console.log(e)
+
+//Readonly
+
+let f: Readonly<a>={
+	name:"Yash",
+	age:123,
+	email:"Yash@gmail.com"
+}
+
+// console.log(f)
+
+// let g = f.name="Yash";
+
+// Record
+let h: Record<string,boolean>={
+	"Yash":true,
+	"John":false
+}
+// console.log(h)
+
+//Keyof
+let j: keyof a;
+j="age"; // Valid
+// let k: i = "unknown"; // Invalid, will cause a TypeScript error
+// console.log(j);
+
+// literal types
+type i = "Yash" | "John" | "Doe";
+
+let k: i = "Yash";
+
+function printName(name): void {
+	if (name === k) {
+		console.log(`Admin is ${name}!`);
+	}
+	else {
+		console.log("Name not recognized.");
+	}
+}
+printName("Yash"); 
