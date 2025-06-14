@@ -11,4 +11,4 @@ PostgreSQL
     8. Comparison
     9. Offset & Limit
     10. IN & Not in
-    12.
+    12.Between
