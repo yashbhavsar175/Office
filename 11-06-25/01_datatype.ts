@@ -23,10 +23,27 @@ let tuple: [string, number] = ["Yash", 25]; // Corrected tuple definition
 
 let anyValue: any = "This can be anything" + 2  ; 
 // Note: Using `any` allows you to bypass type checking, but it's generally not recommended as it defeats the purpose of TypeScript's type safety.
+// console.log(anyValue); // This will log "This can be anything2" without any type errors.
+
 
 let unknownValue: unknown = "This canbe anything but needs type checking before use";
 // Note: Using `unknown` requires type checking before using the value, unlike `any` which can be used directly.
+console.log(unknownValue); // This will log the string without any type errors, but you cannot perform operations on it without type checking.
 
+// SO WHAT IS THE DIFFERENCE BETWEEN ANY AND UNKNOWN?
+// The `any` type allows you to bypass type checking, meaning you can use it without any restrictions.
+// The `unknown` type, on the other hand, requires you to perform type checking before you can use the value, making it safer and more predictable.
+
+// for example, if you want to use `unknownValue` as a string, you need to check its type first:
+if (typeof unknownValue === "string") {
+    console.log(unknownValue.toUpperCase()); // This is safe because we checked the type first.
+}
+// If you try to use `unknownValue` directly without checking its type, TypeScript will throw an error.
+// like this:
+// console.log(unknownValue.toUpperCase()); // This will throw an error because `unknownValue` is of type `unknown` and needs type checking first.  
+
+// and if you want to use `anyValue` as a string, you can do it directly without checking its type:
+console.log(anyValue.toUpperCase()); // This will log "THIS CAN BE ANYTHING2" without any type errors, because `any` allows you to bypass type checking.
 
 let voidFunction: () => void = () => {
     console.log("This function does not return anything");
