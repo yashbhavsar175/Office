@@ -1,0 +1,14 @@
+PostgreSQL
+    1. Create table
+    2. Insert column
+    3. Select (To show table value)
+    4. Select (To show particular column)
+    5. Order By (Asc and Desc)
+    6. Distinct
+    7. Where
+        -With Order by
+        -With OR
+    8. Comparison
+    9. Offset & Limit
+    10. IN & Not in
+    12.

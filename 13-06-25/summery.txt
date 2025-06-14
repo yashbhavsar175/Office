@@ -10,3 +10,9 @@ Typescript
         6. Record
     4. Key of
     5. literal Type
+
+
+PostgreSql
+    1.installing
+    2.set up
+    3.Creating database
