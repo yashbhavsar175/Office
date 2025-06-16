@@ -22,8 +22,8 @@ conn.connect().then(()=>console.log("Database is Connected Successfully"));
 
 async function runQuery() {
     try {
-        const res = await conn.query('SELECT * FROM employee');
-        console.log(res.rows);
+        const result = await conn.query('SELECT * FROM employee');
+        console.log(result.rows);
     } catch (err) {
         console.error(err.message);
     } finally {
