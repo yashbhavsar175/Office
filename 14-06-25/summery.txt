@@ -11,4 +11,5 @@ PostgreSQL
     8. Comparison
     9. Offset & Limit
     10. IN & Not in
-    12.Between
+    11. Between
+    12. Like & iLike (iLike is ignore case sensitive)

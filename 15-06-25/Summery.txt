@@ -1,0 +1,4 @@
+PostgreSQL
+    1. Group by
+        1. Count(*)
+        2. Having
