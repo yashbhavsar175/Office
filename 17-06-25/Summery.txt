@@ -1,0 +1,7 @@
+1. Changes in 31-05-25 folder
+	1. connect database to backend
+	2. Use library for limit max 5 request per minutes 
+
+2. Then using drizzle orm for secure sql query in backend and also give feel like backend as sql
+
+3. Start learning basic Sass
