@@ -1,0 +1,66 @@
+/*
+    1. Variable
+    2. Nesting
+    3. Operator
+    4. Map
+    5. Ampersand
+    6. Mixin
+
+*/
+.button, div button {
+  padding: 9px 18px;
+  background-color: burlywood;
+}
+
+div {
+  background-color: grey;
+  padding: 40px 40px;
+}
+div .con {
+  background-color: blue;
+  margin: 80px 80px;
+  padding: 20px 20px;
+}
+div .con h1 {
+  padding: 20px 20px;
+  font-size: 100px;
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+}
+div .con h1 span {
+  color: red;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+  text-align: center;
+}
+div .con h1:hover span {
+  opacity: 0;
+  pointer-events: none;
+}
+div .con h1:hover::after {
+  content: "This is my name";
+  position: absolute;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  text-align: center;
+  text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+  div {
+    background-color: blue;
+  }
+  div .con {
+    background-color: black;
+  }
+  div .con h1 {
+    font-size: 50px;
+    color: white;
+  }
+  div .con h1 span {
+    color: grey;
+  }
+}/*# sourceMappingURL=style.css.map */

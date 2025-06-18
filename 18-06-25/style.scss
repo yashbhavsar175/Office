@@ -1,0 +1,107 @@
+/*
+    1. Variable
+    2. Nesting
+    3. Operator
+    4. Map
+    5. Ampersand
+    6. Mixin
+    
+*/
+
+
+$bg-color: (
+    "mobile": blue,
+    "desktop": grey
+); // map
+
+$container-color: (
+    "mobile": black,
+    "desktop": blue
+);
+
+$name-size: 100px;
+
+$name-color: (
+    "mobile": grey,
+    "desktop": red
+);
+
+@mixin text-center-with-border {
+    text-align: center;
+    text-decoration: underline;
+}
+
+@mixin edge($t, $r, $b: 0, $l) {
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+} // mixin with parameter
+
+.button {
+            padding: 9px 18px;
+            background-color: burlywood;
+        }
+
+div {
+    background-color: map-get($bg-color, desktop);
+    padding: 40px 40px;
+
+    .con {
+        background-color: map-get($container-color, desktop);
+        margin: 80px 80px;
+        padding: 20px 20px;
+
+        h1 {
+            padding: 20px 20px;
+            font-size: $name-size;
+            position: relative;
+            @include text-center-with-border;
+
+            span {
+                color: map-get($name-color, desktop);
+                display: inline-block;
+                transition: opacity 0.2s ease;
+                text-align: center;
+            }
+
+            &:hover span {
+                //Ampersans
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            &:hover::after {
+                content: "This is my name";
+                position: absolute;
+                @include edge(20px, 0, 0, 0);
+                text-align: center;
+                @include text-center-with-border;
+
+            }
+        }
+
+    }
+    button{
+        @extend .button //extend
+    }
+}
+
+@media screen and (max-width: 900px) {
+    div {
+        background-color: map-get($bg-color, mobile);
+
+        .con {
+            background-color: map-get($container-color, mobile);
+
+            h1 {
+                font-size: $name-size / 2; // Operator
+                color: white;
+
+                span {
+                    color: map-get($name-color, mobile);
+                }
+            }
+        }
+    }
+}
