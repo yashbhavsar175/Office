@@ -1,0 +1,36 @@
+/*
+1. Variable
+2. Nesting
+*/
+
+
+
+$bg-color:grey;
+$text-color:red;
+$container-color:blue;
+$name-size : 100px;
+
+div {
+    background-color: $bg-color;
+    padding: 40px 40px;
+    .con{
+        background-color: $container-color;
+        margin: 20px 20px;
+        h1{
+            color: $text-color;
+            text-align: center;
+            padding: 20px 20px;
+            font-size: $name-size;
+        }
+    }
+}
+
+@media screen  and (max-width : 900px){
+    div{
+        .con{
+            h1{
+                font-size: $name-size/2;// Operator
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+/*
+1. Variable
+2. Nesting
+*/
+div {
+  background-color: grey;
+  padding: 40px 40px;
+}
+div .con {
+  background-color: blue;
+  margin: 20px 20px;
+}
+div .con h1 {
+  color: red;
+  text-align: center;
+  padding: 20px 20px;
+  font-size: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  div .con h1 {
+    font-size: 50px;
+  }
+}/*# sourceMappingURL=style.css.map */
