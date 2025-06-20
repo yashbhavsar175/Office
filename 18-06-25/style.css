@@ -5,8 +5,13 @@
     4. Map
     5. Ampersand
     6. Mixin
-
+    7. Partial (We have to make _filename.scss , remember _ underscore is mandatory)
 */
+.button, div button {
+  padding: 9px 18px;
+  background-color: burlywood;
+}
+
 .button, div button {
   padding: 9px 18px;
   background-color: burlywood;
@@ -20,6 +25,10 @@ div .con {
   background-color: blue;
   margin: 80px 80px;
   padding: 20px 20px;
+}
+div .con a {
+  text-decoration: none;
+  color: red;
 }
 div .con h1 {
   padding: 20px 20px;

@@ -5,9 +5,10 @@
     4. Map
     5. Ampersand
     6. Mixin
-    
+    7. Partial (We have to make _filename.scss , remember _ underscore is mandatory)
 */
 
+@import "_common.scss"; // Partial
 
 $bg-color: (
     "mobile": blue,
@@ -38,20 +39,25 @@ $name-color: (
     left: $l;
 } // mixin with parameter
 
+
 .button {
-            padding: 9px 18px;
-            background-color: burlywood;
-        }
+    padding: 9px 18px;
+    background-color: burlywood;
+}
 
 div {
     background-color: map-get($bg-color, desktop);
     padding: 40px 40px;
-
+    
     .con {
         background-color: map-get($container-color, desktop);
         margin: 80px 80px;
         padding: 20px 20px;
-
+        
+        a {
+            text-decoration: none;
+            color: red;
+        }
         h1 {
             padding: 20px 20px;
             font-size: $name-size;
