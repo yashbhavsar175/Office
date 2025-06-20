@@ -1,0 +1,34 @@
+For install Shopify run this command on your terminal
+//npm install -g @shopify/cli @shopify/theme
+
+to login your store to here
+// Shopify hydrogen init
+-> Link your Shofipy acvount
+->(verify code from login)
+then successfully login
+
+To initialize your custom theme based on Shopify’s default (Dawn):
+-> shopify theme init my-custom-theme --clone-url=https://github.com/Shopify/dawn.git
+
+Start Local Development Server:-
+// shopify theme dev --store=test-component.myshopify.com
+
+You have add file with extension .liquid in {my-custom-theme/section/}
+
+after write whole code you have to add button in {/templates/index.json} on your shopify development account
+format in below
+{
+    "section":{
+        ("filename"):{
+            "type":"(name that show on display)"
+        }
+    }
+}
+
+in above method only you can see your component in development shopify not in main shopify website
+
+to show main website you have to push your code
+
+to push your code you have to write
+
+//shopify theme push
