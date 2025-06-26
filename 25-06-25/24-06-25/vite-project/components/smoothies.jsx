@@ -1,8 +1,9 @@
-import React from 'react'
+
 
 const Smoothies = () => {
   return (
     <div>
+      <h2>Smoothies Page</h2>
       <ul className="recipes">
         <li className="recipe">
           <img src="/smoothie.png" alt="smoothie recipe icon" />
