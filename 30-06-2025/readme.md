@@ -23,4 +23,4 @@ after installing this library you have to add "plugins: ['react-native-reanimate
 
 after that if you want to start you have write this
  "npx react-native run-android" or
- " npx react-native run-android" and " npx react-native start --reset-cache" in dual terminal together
+ " npx react-native run-android" and " npx react-native start --reset-cache" in dual terminal together 
